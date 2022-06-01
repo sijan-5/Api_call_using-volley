@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <ImageView
+
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/shareButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cat" />
+
+
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="nextmeme"
+        android:text="@string/next"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        android:padding="32dp"
+        android:textColor="@color/black"
+        android:background="@color/black"
+        android:layout_marginLeft="5dp"/>
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:backgroundTint="@color/black"
+        android:onClick="memeShare"
+        android:padding="32dp"
+        android:text="@string/share"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        android:layout_marginRight="5dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintLeft_toLeftOf="@id/image"
+        app:layout_constraintRight_toRightOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
